@@ -1,23 +1,23 @@
-//Create an Array & Traverse 
+/*Create an Array & Traverse */
 
-#includeiostream
+#include<iostream>
 using namespace std;
 
 int main(){
-    coutplease Enter the Size of Array  ;
+    cout<<"please Enter the Size of Array: "<<" ";
     int n;
-    cinn;
+    cin>>n;
 
     int arr[n];
    
-    coutplease Enter the Array Elements  ;
-    for(int i=0;in;i++){
-        cinarr[i];
+    cout<<"please Enter the Array Elements: "<<" ";
+    for(int i=0;i<n;i++){
+        cin>>arr[i];
     }
-    coutAfter traversing the Array elements  ;
-    for (int i = 0; i n; i++)
+    cout<<"After traversing the Array elements: "<<" ";
+    for (int i = 0; i <n; i++)
     {
-        coutarr[i] ;
+        cout<<arr[i]<<" ";
     }
     return 0;
 }
