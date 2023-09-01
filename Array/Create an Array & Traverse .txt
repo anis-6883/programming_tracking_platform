@@ -1,0 +1,23 @@
+//Create an Array & Traverse 
+
+#includeiostream
+using namespace std;
+
+int main(){
+    coutplease Enter the Size of Array  ;
+    int n;
+    cinn;
+
+    int arr[n];
+   
+    coutplease Enter the Array Elements  ;
+    for(int i=0;in;i++){
+        cinarr[i];
+    }
+    coutAfter traversing the Array elements  ;
+    for (int i = 0; i n; i++)
+    {
+        coutarr[i] ;
+    }
+    return 0;
+}
