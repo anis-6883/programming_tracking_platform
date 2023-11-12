@@ -1,0 +1,53 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int binarySearch(int [], int, int);
+
+int main() {
+	int arraySize;
+	
+	cout << "Enter Array Size: ";
+	cin >> arraySize;
+
+	int numbers[arraySize];
+
+	for(int i = 0; i < arraySize; i++) 
+	{
+		cout << "numbers[" << i << "] = ";
+		cin >> numbers[i];
+	}
+
+	int findNumber;
+	bool flag = false;
+	cout << "Enter Find Number: ";
+	cin >> findNumber;
+
+	int findIndex = binarySearch(numbers, arraySize, findNumber);
+	
+	findIndex != -1 ?
+		cout << findNumber << " exist in index no " << findIndex << endl :
+		cout << "Number is not exist!" << endl;
+		
+	return 0;
+}
+
+int binarySearch(int numbers[], int arraySize, int findNumber)
+{
+	int startIndex = 0;
+	int endIndex = arraySize - 1;
+	int midIndex = startIndex + (endIndex - startIndex) / 2;
+
+	while(startIndex <= endIndex)
+	{
+		if(numbers[midIndex] == findNumber) return midIndex;
+
+		numbers[midIndex] < findNumber ? 
+			startIndex = midIndex + 1 : 
+			endIndex = midIndex - 1;
+
+
+		midIndex = startIndex + (endIndex - startIndex) / 2;
+	}
+
+	return -1;
+}

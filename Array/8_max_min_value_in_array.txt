@@ -1,0 +1,30 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	int arraySize;
+	
+	cout << "Enter Array Size: ";
+	cin >> arraySize;
+
+	int numbers[arraySize];
+
+	for(int i = 0; i < arraySize; i++) 
+	{
+		cout << "numbers[" << i << "] = ";
+		cin >> numbers[i];
+	}
+
+	int maxValue = numbers[0], minValue = numbers[0];
+
+	for(int j = 1; j < arraySize; j++)
+	{
+		if(numbers[j] > maxValue) maxValue = numbers[j];
+		if(numbers[j] < minValue) minValue = numbers[j];
+	}
+
+	cout << "Max Value of Numbers Array is " << maxValue << endl;
+	cout << "Min Value of Numbers Array is " << minValue << endl;
+		
+	return 0;
+}

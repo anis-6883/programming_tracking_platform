@@ -1,0 +1,50 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	int arraySize1, arraySize2;
+	
+	cout << "Enter First Array Size: ";
+	cin >> arraySize1;
+
+	int numbers1[arraySize1];
+
+	for(int i = 0; i < arraySize1; i++) 
+	{
+		cout << "numbers1[" << i+1 << "] = ";
+		cin >> numbers1[i];
+	}
+
+	cout << "Enter Second Array Size: ";
+	cin >> arraySize2;
+
+	int numbers2[arraySize2];
+
+	for(int j = 0; j < arraySize2; j++) 
+	{
+		cout << "numbers2[" << j+1 << "] = ";
+		cin >> numbers2[j];
+	}
+
+	int totalSize = arraySize1 + arraySize2;
+	int mergedArray[totalSize];
+
+	for(int k=0; k < arraySize1; k++)
+	{
+		mergedArray[k] = numbers1[k];
+	}
+
+	for(int l = 0, m = arraySize1; l < arraySize2 && m < totalSize; l++, m++)
+	{
+		mergedArray[m] = numbers2[l];
+	}
+
+	cout << "After Merge Two Array: " << endl;
+	for(int n = 0; n < totalSize; n++) 
+	{
+		cout << mergedArray[n] << " ";
+	}
+
+	cout << endl;
+	return 0;
+}

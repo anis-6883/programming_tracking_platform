@@ -1,0 +1,33 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	int arraySize;
+	
+	cout << "Enter Array Size: ";
+	cin >> arraySize;
+
+	int numbers[arraySize];
+
+	for(int i = 0; i < arraySize; i++) 
+	{
+		cout << "numbers[" << i+1 << "] = ";
+		cin >> numbers[i];
+	}
+
+	int findNumber;
+	bool flag = false;
+	cout << "Enter Find Number: ";
+	cin >> findNumber;
+
+	for(int j = 0; j < arraySize; j++)
+	{
+		if(numbers[j] == findNumber)
+		{
+			flag = true;
+			break;
+		}
+	}
+	flag ? cout <<  "Number is exist!" << endl :  cout << "Number is not exist!" << endl;
+	return 0;
+}

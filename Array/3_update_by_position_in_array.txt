@@ -1,0 +1,30 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	int arraySize;
+	cout << "Enter Array Size: ";
+	cin >> arraySize;
+
+	int numbers[arraySize];
+
+	for(int i = 0; i < arraySize; i++) {
+		cout << "numbers[" << i+1 << "] = ";
+		cin >> numbers[i];
+	}
+
+	int position, updatedNumber;
+	cout << "Enter Updated Position: ";
+	cin >> position;
+	cout << "Enter Updated Number: ";
+	cin >> updatedNumber;
+
+	numbers[position - 1] = updatedNumber;
+
+	for(int i = 0; i < arraySize; i++){
+		cout << numbers[i] << " ";
+	}
+
+	cout << endl;
+	return 0;
+}
